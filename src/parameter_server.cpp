@@ -62,7 +62,7 @@ void ParameterServer::defaultConfig() {
   addOption("octomap_clamping_min",          static_cast<double> (0.001),                 "Minimum value for clamping of occupancy threshold in voxels");
   addOption("octomap_prob_hit",              static_cast<double> (0.9),                 "Octomap sensor model: Probability value for hit.");
   addOption("octomap_prob_miss",             static_cast<double> (0.4),                 "Octomap sensor model: Probability value for miss.");
-  addOption("octomap_online_creation",       static_cast<bool> (online),                 "Create the octomap during mapping. If using this, every node will be rendered to the octomap directly after they have been added to the graph (and graph optimization, if not skipped b/c of optimizer_skip_step).");
+  addOption("octomap_online_creation",       static_cast<bool> (false),                 "Create the octomap during mapping. If using this, every node will be rendered to the octomap directly after they have been added to the graph (and graph optimization, if not skipped b/c of optimizer_skip_step).");
   addOption("screencast_path_prefix",        std::string(""),                           "If set: capture frames for a screencast with this path as filename-prefix.");
   addOption("transform_individual_clouds",   static_cast<bool> (false),                 "If set: Transform individually saved pcds into common coordinate frame.");
   addOption("compress_output_bagfile",       static_cast<bool> (true),                  "Whether to enable bz2 compression when saving bagfiles");
