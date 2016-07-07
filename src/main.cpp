@@ -113,8 +113,10 @@ int main(int argc, char** argv)
 
   //create thread object, to run the ros event processing loop in parallel to the qt loop
   QtROS qtRos(argc, argv, "rgbdslam"); //ros node name & namespace
+
   // ros::Publisher example;
   //ros :: Subscriber sub
+
   //Depending an use_gui on the Parameter Server, a gui- or a headless application is used
   QApplication app(argc, argv, ParameterServer::instance()->get<bool>("use_gui")); 
 
@@ -147,8 +149,11 @@ int main(int argc, char** argv)
   QObject::connect(&app, SIGNAL(aboutToQuit()), &qtRos, SLOT(quitNow()));
   QObject::connect(&qtRos, SIGNAL(rosQuits()), &app, SLOT(quit()));
 
+<<<<<<< HEAD
   //ROS_WARN("test");
 
+=======
+>>>>>>> 0bf4befd5b30da20754c1e05f39c11a3fe8b5477
   qtRos.start();// Run main loop.
   app.exec();
   //if(ros::ok()) ros::shutdown();//If not yet done through the qt connection

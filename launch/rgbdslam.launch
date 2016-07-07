@@ -3,7 +3,8 @@
 
      The openni driver has to be started seperately, e.g. with "roslaunch openni_launch openni.launch" -->
 <launch>
-  <node pkg="rgbdslam" type="rgbdslam" name="rgbdslam" cwd="node" required="true" output="screen" > 
+< HEAD
+  <node pkg="rgbdslam" type="rgbdslam" name="rgbdslam" cwd="node" required="true" output="screen"> 
     <!-- Input data settings-->
     <param name="config/topic_image_mono"              value="/camera/rgb/image_color"/> 
     <param name="config/topic_image_depth"             value="/camera/depth_registered/sw_registered/image_rect_raw"/>
