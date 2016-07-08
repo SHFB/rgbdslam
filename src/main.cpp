@@ -149,11 +149,8 @@ int main(int argc, char** argv)
   QObject::connect(&app, SIGNAL(aboutToQuit()), &qtRos, SLOT(quitNow()));
   QObject::connect(&qtRos, SIGNAL(rosQuits()), &app, SLOT(quit()));
 
-<<<<<<< HEAD
   //ROS_WARN("test");
 
-=======
->>>>>>> 0bf4befd5b30da20754c1e05f39c11a3fe8b5477
   qtRos.start();// Run main loop.
   app.exec();
   //if(ros::ok()) ros::shutdown();//If not yet done through the qt connection
